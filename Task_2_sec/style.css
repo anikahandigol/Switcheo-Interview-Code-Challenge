@@ -1,0 +1,220 @@
+/* Ensure html and body take up the full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, sans-serif; /* Set font to Roboto */
+}
+
+/* Original body styling */
+body {
+  display: flex;
+  flex-direction: column; /* Change from row to column */
+  align-items: center;
+  justify-content: center;
+  min-width: 360px;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-image: url('images/background.png'); /* Add the background image */
+  background-size: cover; /* Ensure the image covers the entire background */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-attachment: fixed; /* Ensure the background image stays fixed during scrolling */
+}
+
+/* Form styling */
+form {
+  max-width: 400px;
+  margin: 20px;
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.9); /* Add a semi-transparent background to the form */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.swap-header {
+  font-weight: 700; /* Make the text bold */
+  font-size: 2em; /* Increase the font size */
+  text-align: center;
+}
+
+form .form-group {
+  margin-bottom: 1em;
+}
+
+form label {
+  margin-bottom: .5em;
+  color: #333333;
+  display: block;
+}
+
+form .input-group {
+  display: flex;
+  align-items: center;
+}
+
+form .input-group input {
+  flex: 1;
+  border: 1px solid #CCCCCC;
+  padding: .5em;
+  font-size: 1em;
+  box-sizing: border-box;
+  border-radius: 5px 0 0 5px;
+}
+
+form .select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 5px; /* Ensure equal margin on the left */
+  margin-right: 5px; /* Ensure equal margin on the right */
+  width: 150px; /* Set your desired width */
+}
+
+.custom-select {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%; /* Match the width of the parent */
+}
+
+.custom-select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5em;
+  border: 1px solid #CCCCCC;
+  border-radius: 0 5px 5px 0;
+  background-color: #fff;
+  cursor: pointer;
+  width: 100%; /* Ensure it takes the full width of the parent */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.custom-select-trigger span {
+  flex: 1;
+}
+
+.custom-select-trigger img.token-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+.custom-options {
+  display: none; /* Hide by default */
+  flex-direction: column;
+  width: 100%; /* Match the width of the parent */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border: 1px solid #CCCCCC;
+  border-radius: 0 0 5px 5px;
+  background-color: #fff;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+  z-index: 1;
+  max-height: 200px; /* Limit the height to avoid overflowing */
+  overflow-y: auto; /* Add vertical scrolling */
+}
+
+.custom-options.open {
+  display: flex; /* Show when open */
+}
+
+.custom-option {
+  display: flex;
+  align-items: center;
+  padding: .5em;
+  cursor: pointer;
+}
+
+.custom-option:hover {
+  background-color: #f0f0f0;
+}
+
+.custom-option img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+form button {
+  padding: 0.7em;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 400px; /* Set a max width */
+  border-radius: 5px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#wallet-form .form-group {
+  margin-bottom: 1em;
+}
+
+#wallet-form label {
+  margin-bottom: .5em;
+  color: #333333;
+  display: block;
+}
+
+#wallet-form input {
+  border: 1px solid #CCCCCC;
+  padding: .5em;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#wallet-form button {
+  padding: 0.7em;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#wallet-form button:hover {
+  background-color: #0056b3;
+}
